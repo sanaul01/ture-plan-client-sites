@@ -19,7 +19,7 @@ const AddServices = () => {
         <div>
             <h2>Add Services</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input {...register("title", { required: true, maxLength: 20 })} placeholder="Title" />
+                <input {...register("title", { required: true, maxLength: 30 })} placeholder="Title" />
                 <textarea {...register("description")} placeholder="Description"/>
                 <input type="number" {...register("price")} placeholder="price"/>
                 <input {...register("img")} placeholder="image url" />
