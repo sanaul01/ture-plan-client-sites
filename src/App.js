@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './Context/AuthProvider';
 import AddServices from './Pages/Home/AddServices/AddServices';
+import AddUsers from './Pages/Home/AddUsers/AddUsers';
 import Booking from './Pages/Home/Booking/Booking';
 import Header from './Pages/Home/Header/Header';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Home/Login/Login';
 import ManageServices from './Pages/Home/ManageServices/ManageServices';
+import MyService from './Pages/Home/MyService/MyService';
 import PlaceOrder from './Pages/Home/PlaceOrder/PlaceOrder';
 import PrivateRoute from './Pages/Home/PrivateRoute/PrivateRoute';
 
@@ -39,6 +41,12 @@ function App() {
           </Route>
           <Route path="/manageservices">
             <ManageServices></ManageServices>
+          </Route>
+          <Route path="/addusers">
+            <AddUsers></AddUsers>
+          </Route>
+          <Route path="/myservice">
+            <MyService></MyService>
           </Route>
         </Switch>
       </Router>
