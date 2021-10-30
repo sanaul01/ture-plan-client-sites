@@ -3,9 +3,11 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './Context/AuthProvider';
 import AddServices from './Pages/Home/AddServices/AddServices';
+import Booking from './Pages/Home/Booking/Booking';
 import Header from './Pages/Home/Header/Header';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Home/Login/Login';
+import ManageServices from './Pages/Home/ManageServices/ManageServices';
 import PlaceOrder from './Pages/Home/PlaceOrder/PlaceOrder';
 import PrivateRoute from './Pages/Home/PrivateRoute/PrivateRoute';
 
@@ -29,8 +31,14 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
+          <Route path="/booking/:serviceId">
+            <Booking></Booking>
+          </Route>
           <Route path ="/addservices">
             <AddServices></AddServices>
+          </Route>
+          <Route path="/manageservices">
+            <ManageServices></ManageServices>
           </Route>
         </Switch>
       </Router>
