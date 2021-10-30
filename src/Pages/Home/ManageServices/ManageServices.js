@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 // All services method 
@@ -40,6 +41,9 @@ const ManageServices = () => {
                     <h2>{manageService.title}</h2>
                     <h3>{manageService.price}</h3>
                     <p>{manageService.description}</p>
+                    <Link to={`/updateservice/${manageService._id}`}>
+                    <button>Update Service</button>
+                    </Link>
 
                     {/* handeling delete button  */}
                     <button onClick={()=>handledelete(manageService._id)}>Delete Service</button>

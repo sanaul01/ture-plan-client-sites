@@ -12,6 +12,7 @@ import ManageServices from './Pages/Home/ManageServices/ManageServices';
 import MyService from './Pages/Home/MyService/MyService';
 import PlaceOrder from './Pages/Home/PlaceOrder/PlaceOrder';
 import PrivateRoute from './Pages/Home/PrivateRoute/PrivateRoute';
+import UpdateService from './Pages/Home/UpdateService/UpdateService';
 
 
 function App() {
@@ -47,6 +48,9 @@ function App() {
           </Route>
           <Route path="/myservice">
             <MyService></MyService>
+          </Route>
+          <Route path="/updateservice/:serviceId">
+            <UpdateService></UpdateService>
           </Route>
         </Switch>
       </Router>
