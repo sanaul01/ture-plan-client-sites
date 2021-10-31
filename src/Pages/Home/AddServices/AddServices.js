@@ -7,7 +7,7 @@ const AddServices = () => {
     const onSubmit = data => {
         console.log(data)
 
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://eerie-cat-58293.herokuapp.com/services', data)
         .then(res =>{
             if(res.data.insertedId){
                 alert('successfully added')
@@ -20,9 +20,13 @@ const AddServices = () => {
             <h2>Add Services</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("title", { required: true, maxLength: 30 })} placeholder="Title" />
+                <br />
                 <textarea {...register("description")} placeholder="Description"/>
+                <br />
                 <input type="number" {...register("price")} placeholder="price"/>
+                <br />
                 <input {...register("img")} placeholder="image url" />
+                <br />
                 <input type="submit" />
             </form>
         </div>

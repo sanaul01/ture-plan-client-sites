@@ -6,7 +6,7 @@ const UpdateService = () => {
     const {serviceId} = useParams()
     const [service, setService] = useState({})
     useEffect( ()=>{
-        fetch(`http://localhost:5000/services/${serviceId}`)
+        fetch(`https://eerie-cat-58293.herokuapp.com/services/${serviceId}`)
         .then(res=> res.json())
         .then(data => setService(data))
     }, [])
@@ -43,7 +43,7 @@ const UpdateService = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         // console.log(data)
-        fetch(`http://localhost:5000/services/${serviceId}`, {
+        fetch(`https://eerie-cat-58293.herokuapp.com/services/${serviceId}`, {
             method: 'PUT',
             headers: {
                 'content-type' : 'application/json'
@@ -69,12 +69,17 @@ const UpdateService = () => {
             </div>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("title")} onChange={handleNameChange} value={service?.title || ''} placeholder="Title" />
+                <br />
                 <textarea {...register("description")} onChange={handleDescriptionChange}
                 value={service?.description || ''} placeholder="Description"/>
+                <br />
                 <input type="number" {...register("price")} onChange={handelPriceChange}
                 value={service?.price || ''} placeholder="price"/>
+                <br />
                 <input {...register("img")} value={service?.img || ''}
                 onChange={handleImgChange} placeholder="image url" />
+                <br />
+
                 <input type="submit" />
             </form>
         </div>

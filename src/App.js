@@ -40,24 +40,24 @@ function App() {
           <Route path="/booking/:serviceId">
             <Booking></Booking>
           </Route>
-          <Route path ="/addservices">
+          <PrivateRoute path ="/addservices">
             <AddServices></AddServices>
-          </Route>
-          <Route path="/manageservices">
+          </PrivateRoute>
+          <PrivateRoute path="/manageservices">
             <ManageServices></ManageServices>
-          </Route>
-          <Route path="/addusers">
+          </PrivateRoute>
+          <PrivateRoute path="/addusers">
             <AddUsers></AddUsers>
-          </Route>
-          <Route path="/myservice">
+          </PrivateRoute>
+          <PrivateRoute path="/myservice">
             <MyService></MyService>
-          </Route>
+          </PrivateRoute>
           <Route path="/updateservice/:serviceId">
             <UpdateService></UpdateService>
           </Route>
-          <Route path="/myorder">
+          <PrivateRoute path="/myorder">
             <MyOrders></MyOrders>
-          </Route>
+          </PrivateRoute>
           <Route path="*">
             <NotFound></NotFound>
           </Route>

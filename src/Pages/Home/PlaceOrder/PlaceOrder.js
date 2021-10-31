@@ -4,7 +4,7 @@ import MyOrder from './MyOrder/MyOrder';
 const PlaceOrder = () => {
     const [myOrders, setMyOrders] = useState();
     useEffect( ()=>{
-        fetch('http://localhost:5000/myorder')
+        fetch('https://eerie-cat-58293.herokuapp.com/myorder')
         .then(res => res.json())
         .then(data => setMyOrders(data))
     }, [])

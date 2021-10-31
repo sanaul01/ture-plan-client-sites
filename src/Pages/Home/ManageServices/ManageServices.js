@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import './ManageService.css'
 
 
 // All services method 
 const ManageServices = () => {
     const [manageServices, setManageServices] = useState();
     useEffect( ()=>{
-        fetch('http://localhost:5000/services')
+        fetch('https://eerie-cat-58293.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setManageServices(data))
     }, []);
 
     // Delete method 
     const handledelete = id =>{
-        const url = `http://localhost:5000/services/${id}`;
+        const url = `https://eerie-cat-58293.herokuapp.com/services/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
@@ -35,6 +36,7 @@ const ManageServices = () => {
             <h2>This is manageservice</h2>
             {
                 manageServices?.map(manageService =><div
+                className="manageservice"
                 key={manageService._id}
                 >
                     <img src={manageService.img} alt="" />

@@ -6,13 +6,14 @@ import './Home.css'
 const Home = () => {
     const [services, setServices] = useState();
     useEffect( ()=>{
-        fetch('http://localhost:5000/services')
+        fetch('https://eerie-cat-58293.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setServices(data))
     }, [])
     return (
         <div className="container">
             <Banner></Banner>
+            <h1>Our~Services</h1>
             <div className="services">
             {
                 services?.map(service => <Service
