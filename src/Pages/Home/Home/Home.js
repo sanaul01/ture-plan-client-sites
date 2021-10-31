@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Banner from '../Banner/Banner';
 import Service from '../Service/Service';
 import './Home.css'
 
@@ -11,6 +12,7 @@ const Home = () => {
     }, [])
     return (
         <div className="container">
+            <Banner></Banner>
             <div className="services">
             {
                 services?.map(service => <Service

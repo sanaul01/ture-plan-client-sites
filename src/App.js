@@ -5,11 +5,14 @@ import AuthProvider from './Context/AuthProvider';
 import AddServices from './Pages/Home/AddServices/AddServices';
 import AddUsers from './Pages/Home/AddUsers/AddUsers';
 import Booking from './Pages/Home/Booking/Booking';
+import Footer from './Pages/Home/Footer/Footer';
 import Header from './Pages/Home/Header/Header';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Home/Login/Login';
 import ManageServices from './Pages/Home/ManageServices/ManageServices';
+import MyOrders from './Pages/Home/MyOrders/MyOrders';
 import MyService from './Pages/Home/MyService/MyService';
+import NotFound from './Pages/Home/NotFound/NotFound';
 import PlaceOrder from './Pages/Home/PlaceOrder/PlaceOrder';
 import PrivateRoute from './Pages/Home/PrivateRoute/PrivateRoute';
 import UpdateService from './Pages/Home/UpdateService/UpdateService';
@@ -52,7 +55,14 @@ function App() {
           <Route path="/updateservice/:serviceId">
             <UpdateService></UpdateService>
           </Route>
+          <Route path="/myorder">
+            <MyOrders></MyOrders>
+          </Route>
+          <Route path="*">
+            <NotFound></NotFound>
+          </Route>
         </Switch>
+        <Footer></Footer>
       </Router>
       </AuthProvider>
     </div>
