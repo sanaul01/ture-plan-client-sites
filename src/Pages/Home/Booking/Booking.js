@@ -15,10 +15,8 @@ const Booking = () => {
     }, []);
 
     const handletitleChange = e =>{
-        const service = e.target.valau;
-        setService(service)
-        // const updateservice = {title: service.title, price: service.price, description: service.description, img: service.img};
-        // setService(updateservice)
+        const updateservice = {title: service.title, price: service.price, description: service.description, img: service.img};
+        setService(updateservice)
     }
     const handleDescriptionChange = e =>{
         const updateservice = {title: service.title, price: service.price, description: service.description, img: service.img};
