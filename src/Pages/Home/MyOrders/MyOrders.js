@@ -10,7 +10,9 @@ const MyOrders = () => {
 
     // Delete method 
     const handledelete = id =>{
-        const url = `https://eerie-cat-58293.herokuapp.com/myorder/${id}`;
+        const deleteProced = window.confirm("Are you want to delete?");
+        if(deleteProced){
+            const url = `https://eerie-cat-58293.herokuapp.com/myorder/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
@@ -24,6 +26,7 @@ const MyOrders = () => {
             }
             
         })
+        }
     }
 
     return (

@@ -14,7 +14,9 @@ const ManageServices = () => {
 
     // Delete method 
     const handledelete = id =>{
-        const url = `https://eerie-cat-58293.herokuapp.com/services/${id}`;
+        const deleteProced = window.confirm("Are you want to delete?")
+        if(deleteProced){
+            const url = `https://eerie-cat-58293.herokuapp.com/services/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
@@ -28,7 +30,8 @@ const ManageServices = () => {
             }
             
         })
-    }
+        }
+    };
 
 
     return (

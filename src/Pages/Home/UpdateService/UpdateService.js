@@ -42,8 +42,10 @@ const UpdateService = () => {
 
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        // console.log(data)
-        fetch(`https://eerie-cat-58293.herokuapp.com/services/${serviceId}`, {
+
+        const proced = window.confirm("Are you want to update?")
+        if(proced){
+            fetch(`https://eerie-cat-58293.herokuapp.com/services/${serviceId}`, {
             method: 'PUT',
             headers: {
                 'content-type' : 'application/json'
@@ -57,6 +59,7 @@ const UpdateService = () => {
                 setService({});
             }
         })
+        }
     };
     return (
         <div>
