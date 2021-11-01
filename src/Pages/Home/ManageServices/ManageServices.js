@@ -42,7 +42,7 @@ const ManageServices = () => {
                 className="manageservice"
                 key={manageService._id}
                 >
-                    <img src={manageService.img} alt="" />
+                    <img className="col-sm-6" src={manageService.img} alt="" />
                     <h2>{manageService.title}</h2>
                     <h3>{manageService.price}</h3>
                     <p>{manageService.description}</p>
